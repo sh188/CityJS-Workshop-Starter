@@ -91,6 +91,9 @@ export default {
         modeSwitch() {
             this.resetGame()
             this.mode = this.mode === "2Player" ? "ai" : "2Player";
+            if(this.mode === 'ai') {
+                this.turn = 1
+            }
         },
         resetGame() {
             this.game = uuid();
